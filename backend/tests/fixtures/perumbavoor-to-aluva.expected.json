@@ -1,0 +1,332 @@
+[
+  {
+    "sl_no": 1,
+    "destination": "Perumbavoor",
+    "timing": "05:00"
+  },
+  {
+    "sl_no": 2,
+    "destination": "Perumbavoor Town",
+    "timing": "05:00"
+  },
+  {
+    "sl_no": 3,
+    "destination": "Kolancheri Kavala",
+    "timing": "05:01"
+  },
+  {
+    "sl_no": 4,
+    "destination": "Lakshmi Pady",
+    "timing": "05:02"
+  },
+  {
+    "sl_no": 5,
+    "destination": "Pathipalam",
+    "timing": "05:03"
+  },
+  {
+    "sl_no": 6,
+    "destination": "Akashavani",
+    "timing": "05:04"
+  },
+  {
+    "sl_no": 7,
+    "destination": "Thottappadan Padi",
+    "timing": "05:05"
+  },
+  {
+    "sl_no": 8,
+    "destination": "Allapra",
+    "timing": "05:06"
+  },
+  {
+    "sl_no": 9,
+    "destination": "Allapra Kurish Junction",
+    "timing": "05:07"
+  },
+  {
+    "sl_no": 10,
+    "destination": "Marble Junction",
+    "timing": "05:09"
+  },
+  {
+    "sl_no": 11,
+    "destination": "Company Pady",
+    "timing": "05:11"
+  },
+  {
+    "sl_no": 12,
+    "destination": "Vengola Junction",
+    "timing": "05:12"
+  },
+  {
+    "sl_no": 13,
+    "destination": "Grama Panchayath Pady",
+    "timing": "05:13"
+  },
+  {
+    "sl_no": 14,
+    "destination": "Onamkulam",
+    "timing": "05:15"
+  },
+  {
+    "sl_no": 15,
+    "destination": "Meprathupady",
+    "timing": "05:17"
+  },
+  {
+    "sl_no": 16,
+    "destination": "Thaikavu",
+    "timing": "05:18"
+  },
+  {
+    "sl_no": 17,
+    "destination": "Arakkupady",
+    "timing": "05:20"
+  },
+  {
+    "sl_no": 18,
+    "destination": "Plavinchuvadu",
+    "timing": "05:22"
+  },
+  {
+    "sl_no": 19,
+    "destination": "Valiyakulam",
+    "timing": "05:24"
+  },
+  {
+    "sl_no": 20,
+    "destination": "Kadhalikunnu",
+    "timing": "05:25"
+  },
+  {
+    "sl_no": 21,
+    "destination": "Poomalakutty",
+    "timing": "05:26"
+  },
+  {
+    "sl_no": 22,
+    "destination": "Poomala",
+    "timing": "05:27"
+  },
+  {
+    "sl_no": 23,
+    "destination": "Oottimattom",
+    "timing": "05:28"
+  },
+  {
+    "sl_no": 24,
+    "destination": "Canal Vandu",
+    "timing": "05:29"
+  },
+  {
+    "sl_no": 25,
+    "destination": "Kavungalparambu",
+    "timing": "05:30"
+  },
+  {
+    "sl_no": 26,
+    "destination": "West Chelakkulam",
+    "timing": "05:31"
+  },
+  {
+    "sl_no": 27,
+    "destination": "Thaikavu",
+    "timing": "05:32"
+  },
+  {
+    "sl_no": 28,
+    "destination": "Vilangu Schoolpadi",
+    "timing": "05:33"
+  },
+  {
+    "sl_no": 29,
+    "destination": "Vilangu",
+    "timing": "05:34"
+  },
+  {
+    "sl_no": 30,
+    "destination": "Ambalapady",
+    "timing": "05:35"
+  },
+  {
+    "sl_no": 31,
+    "destination": "Kitex",
+    "timing": "05:35"
+  },
+  {
+    "sl_no": 32,
+    "destination": "Saras",
+    "timing": "05:38"
+  },
+  {
+    "sl_no": 33,
+    "destination": "Haritha",
+    "timing": "05:38"
+  },
+  {
+    "sl_no": 34,
+    "destination": "Sevana Padi",
+    "timing": "05:40"
+  },
+  {
+    "sl_no": 35,
+    "destination": "Kizhakkambalam Market",
+    "timing": "05:41"
+  },
+  {
+    "sl_no": 36,
+    "destination": "Kizhakkambalam",
+    "timing": "05:42"
+  },
+  {
+    "sl_no": 37,
+    "destination": "Twenty 20 Nagar",
+    "timing": "05:43"
+  },
+  {
+    "sl_no": 38,
+    "destination": "Thamarachal",
+    "timing": "05:44"
+  },
+  {
+    "sl_no": 39,
+    "destination": "Pazhanganad Hospital",
+    "timing": "05:47"
+  },
+  {
+    "sl_no": 40,
+    "destination": "Kappela Pady",
+    "timing": "05:48"
+  },
+  {
+    "sl_no": 41,
+    "destination": "Shapum Pady",
+    "timing": "05:49"
+  },
+  {
+    "sl_no": 42,
+    "destination": "North Pazhangad",
+    "timing": "05:50"
+  },
+  {
+    "sl_no": 43,
+    "destination": "Ashan Pady",
+    "timing": "05:51"
+  },
+  {
+    "sl_no": 44,
+    "destination": "Pukkattupady",
+    "timing": "05:53"
+  },
+  {
+    "sl_no": 45,
+    "destination": "Wire Ropes Junction",
+    "timing": "05:53"
+  },
+  {
+    "sl_no": 46,
+    "destination": "Ashari Pady",
+    "timing": "05:54"
+  },
+  {
+    "sl_no": 47,
+    "destination": "NAD Kavala",
+    "timing": "05:57"
+  },
+  {
+    "sl_no": 48,
+    "destination": "Edathala Panchayath",
+    "timing": "05:59"
+  },
+  {
+    "sl_no": 49,
+    "destination": "Malayil Palli",
+    "timing": "06:00"
+  },
+  {
+    "sl_no": 50,
+    "destination": "Thaikavu Junction",
+    "timing": "06:01"
+  },
+  {
+    "sl_no": 51,
+    "destination": "Sos",
+    "timing": "06:02"
+  },
+  {
+    "sl_no": 52,
+    "destination": "Ettekar Pally",
+    "timing": "06:03"
+  },
+  {
+    "sl_no": 53,
+    "destination": "Choondi",
+    "timing": "06:05"
+  },
+  {
+    "sl_no": 54,
+    "destination": "Colony Padi",
+    "timing": "06:06"
+  },
+  {
+    "sl_no": 55,
+    "destination": "Cochin Bank",
+    "timing": "06:07"
+  },
+  {
+    "sl_no": 56,
+    "destination": "Carmel Hospital",
+    "timing": "06:08"
+  },
+  {
+    "sl_no": 57,
+    "destination": "Andicompany",
+    "timing": "06:10"
+  },
+  {
+    "sl_no": 58,
+    "destination": "Assisi",
+    "timing": "06:11"
+  },
+  {
+    "sl_no": 59,
+    "destination": "Power House",
+    "timing": "06:12"
+  },
+  {
+    "sl_no": 60,
+    "destination": "Aluva Police Station",
+    "timing": "06:13"
+  },
+  {
+    "sl_no": 61,
+    "destination": "Zeenath Junction",
+    "timing": "06:14"
+  },
+  {
+    "sl_no": 62,
+    "destination": "Old Railway",
+    "timing": "06:15"
+  },
+  {
+    "sl_no": 63,
+    "destination": "Aluva KSRTC",
+    "timing": "06:15"
+  },
+  {
+    "sl_no": 64,
+    "destination": "Government Hospital",
+    "timing": "06:16"
+  },
+  {
+    "sl_no": 65,
+    "destination": "Karothukuzhi",
+    "timing": "06:17"
+  },
+  {
+    "sl_no": 66,
+    "destination": "Aluva",
+    "timing": "06:18"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "smart-timetable-digitizer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/launch.mjs setup",
+    "dev": "node scripts/launch.mjs dev",
+    "build": "npm --prefix frontend run build",
+    "check": "node scripts/launch.mjs check"
+  },
+  "engines": { "node": ">=20.19.0" }
+}
