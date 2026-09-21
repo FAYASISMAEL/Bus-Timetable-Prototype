@@ -1,6 +1,8 @@
 import axios from 'axios';
+import { resolveApiBase, backendConnectionMessage } from './baseUrl';
 
-export const API_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/$/, '');
+export const API_BASE = resolveApiBase(import.meta.env.VITE_API_BASE_URL, { development: import.meta.env.DEV });
+export const CONNECTION_MESSAGE = backendConnectionMessage(import.meta.env.DEV);
 export const api = axios.create({ baseURL: API_BASE, timeout: 20000 });
 export const sourceUrl = id => `${API_BASE}/api/documents/${encodeURIComponent(id)}/source`;
 
@@ -8,7 +10,7 @@ export function errorMessage(error) {
   const response = error?.response;
   if (!response) return error?.code === 'ECONNABORTED'
     ? 'The request timed out. Check the document status before retrying.'
-    : 'Could not connect to backend. Start FastAPI and try again.';
+    : CONNECTION_MESSAGE;
   const data = response.data;
   return data?.error?.message || (typeof data?.detail === 'string' ? data.detail : 'The request could not be completed. Please try again.');
 }

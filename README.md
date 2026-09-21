@@ -388,4 +388,10 @@ The root package pins Node.js to `22.x` so deployments cannot jump to a new majo
 
 Set `VITE_API_BASE_URL` in Vercel to your deployed FastAPI backend's HTTPS URL before building. Add the Vercel frontend origin to the backend's `CORS_ORIGINS`. This configuration publishes the frontend; the Python backend still needs a running deployment with MongoDB, persistent uploads and Tesseract for scans. The default `http://localhost:8000` API URL is for local development.
 
+If the site works on the laptop but shows every service as disconnected on a phone, check its API URL. `localhost` means the device opening the page, so the phone cannot reach the laptop that way. Both devices must use the same public HTTPS backend. CORS changes alone do not make the laptop reachable from the Internet.
+
+Production builds now require an explicit public HTTPS `VITE_API_BASE_URL` and reject loopback/private network addresses. Set it in Vercel's project environment variables, then redeploy: Vite embeds the value at build time. Local `npm run dev` still uses the laptop's backend. Do not set this variable to the frontend's Vercel URL, because this deployment only serves the frontend.
+
+For a temporary demonstration, an HTTPS tunnel can forward a public URL to the laptop's port 8000. The laptop, MongoDB, backend and tunnel must remain running, and a changed tunnel URL requires updating Vercel and redeploying. For access independent of the laptop, deploy FastAPI with its OCR dependencies, a persistent upload volume, and a reachable MongoDB database. Use the resulting backend URL for `VITE_API_BASE_URL`.
+
 See [Vercel build configuration](https://vercel.com/docs/builds/configure-a-build) and [supported Node.js versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions).

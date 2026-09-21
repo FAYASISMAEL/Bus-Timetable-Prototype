@@ -51,7 +51,7 @@ try {
   dom.window.HTMLAnchorElement.prototype.click = function () {};
   dom.window.confirm = () => true;
 
-  await build({ entryPoints: [path.join(frontend, 'src/App.jsx')], outfile: path.join(frontend, '.runtime/App.mjs'), bundle: true, format: 'esm', platform: 'node', jsx: 'automatic', external: ['react', 'react-dom', 'axios'], define: { 'import.meta.env': '{}' } });
+  await build({ entryPoints: [path.join(frontend, 'src/App.jsx')], outfile: path.join(frontend, '.runtime/App.mjs'), bundle: true, format: 'esm', platform: 'node', jsx: 'automatic', external: ['react', 'react-dom', 'axios'], define: { 'import.meta.env': JSON.stringify({ DEV: true }) } });
   const { default: React, act } = await import('react');
   reactAct = act;
   const { createRoot } = await import('react-dom/client');
