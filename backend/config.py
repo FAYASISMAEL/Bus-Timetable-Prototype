@@ -26,6 +26,7 @@ OCR_TIMEOUT = positive_int("OCR_TIMEOUT_SECONDS", 60, 120)
 TABLE_Y_TOLERANCE = positive_int("TABLE_Y_TOLERANCE", 4, 6)
 EXTRACTION_DEBUG = os.getenv("EXTRACTION_DEBUG", "").lower() in {"1", "true", "yes"}
 OCR_LANGUAGE = os.getenv("OCR_LANGUAGE", "eng").strip() or "eng"
-CORS_ORIGINS = [s.strip() for s in os.getenv(
-    "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
+CORS_ORIGINS = [s.strip().rstrip("/") for s in os.getenv(
+    "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,"
+    "https://bus-timetable-prototype-ry6l-ten.vercel.app"
 ).split(",") if s.strip()]

@@ -73,6 +73,33 @@ def test_cors_and_upload_body_limit():
     assert response.status_code == 413
 
 
+def test_vercel_upload_preflight_and_error_response_cors(monkeypatch):
+    origin = 'https://bus-timetable-prototype-ry6l-ten.vercel.app'
+    from fastapi.middleware.cors import CORSMiddleware
+    middleware = next(item for item in app.user_middleware if item.cls is CORSMiddleware)
+    # Exercise the real upload route and middleware without depending on a local .env.
+    try:
+        with monkeypatch.context() as context:
+            context.setitem(middleware.kwargs, 'allow_origins', [origin])
+            context.setitem(app.dependency_overrides, get_database, lambda: None)
+            app.middleware_stack = None
+            client = TestClient(app)
+            response = client.options('/api/upload', headers={
+                'Origin': origin, 'Access-Control-Request-Method': 'POST',
+                'Access-Control-Request-Headers': 'content-type'})
+            assert response.status_code == 200
+            assert response.headers['access-control-allow-origin'] == origin
+            response = client.post('/api/upload', headers={'Origin': origin})
+            assert response.status_code == 422
+            assert response.headers['access-control-allow-origin'] == origin
+            denied = client.options('/api/upload', headers={
+                'Origin': 'https://another-project.vercel.app', 'Access-Control-Request-Method': 'POST'})
+            assert denied.status_code == 400 and 'access-control-allow-origin' not in denied.headers
+            client.close()
+    finally:
+        app.middleware_stack = None
+
+
 @pytest.mark.integration
 def test_upload_validation_and_cleanup(live_api):
     client, db = live_api
