@@ -8,5 +8,5 @@
     "build": "npm --prefix frontend run build",
     "check": "node scripts/launch.mjs check"
   },
-  "engines": { "node": ">=20.19.0" }
+  "engines": { "node": "22.x" }
 }

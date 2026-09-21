@@ -63,7 +63,7 @@ Generated `.env`, `.venv`, uploads, local language packs, development data, and 
 ## Prerequisites
 
 - Python **3.10 or newer** (3.12 tested).
-- Node.js **20.19+ or 22.12+**, with npm.
+- Node.js **22.x (22.12 or later)**, with npm. Vercel is pinned to this major version.
 - Tesseract 5 with both `eng` and `mal` data.
 - MongoDB Community locally, or a MongoDB Atlas database.
 
@@ -373,3 +373,19 @@ powershell -ExecutionPolicy Bypass -File .\start.ps1
 Frontend: http://localhost:5173  
 Backend: http://localhost:8000  
 API docs: http://localhost:8000/docs
+
+
+## Deploy the frontend on Vercel
+
+Set Vercel's Root Directory to the directory containing this README and the root `package.json` (not `frontend`). The root `vercel.json` configures:
+
+- Install Command: `npm --prefix frontend ci --include=dev`
+- Build Command: `npm run build`
+- Output Directory: `frontend/dist`
+- Framework: Vite
+
+The root package pins Node.js to `22.x` so deployments cannot jump to a new major version. Commit `vercel.json`, both package manifests and `frontend/package-lock.json`, then redeploy. Dependencies are installed from the lockfile on Vercel; do not commit `node_modules`.
+
+Set `VITE_API_BASE_URL` in Vercel to your deployed FastAPI backend's HTTPS URL before building. Add the Vercel frontend origin to the backend's `CORS_ORIGINS`. This configuration publishes the frontend; the Python backend still needs a running deployment with MongoDB, persistent uploads and Tesseract for scans. The default `http://localhost:8000` API URL is for local development.
+
+See [Vercel build configuration](https://vercel.com/docs/builds/configure-a-build) and [supported Node.js versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions).
